@@ -18,3 +18,7 @@
 $('.message a').click(function(){
    $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
 });
+
+$('.location ul a').click(function(){
+   $('.location input').text(this.text);
+});
