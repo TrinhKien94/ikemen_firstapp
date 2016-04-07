@@ -15,10 +15,9 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
-$('.message a').click(function(){
-   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
-});
 
-$('.location ul a').click(function(){
-   $('.location input').text(this.text);
+$(document).ready(function(){
+    $("p").click(function(){
+        $("p").hide();
+    });
 });

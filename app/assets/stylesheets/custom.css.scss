@@ -176,7 +176,7 @@ p {
 .nav-right{
     margin-top:10px;
     float:left;
-    margin-left:150px;
+    margin-left:130px;
     //line-height:34px;
 }
 .mode-bar{
@@ -199,4 +199,23 @@ p {
   color:#ffffff;
   font-weight:bold;
   text-decoration: none;
+}
+.mylogo{
+  margin-left: 200px
+}
+.carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+
+.carousel-caption h3 {
+    color: #fff !important;
+}
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
 }
