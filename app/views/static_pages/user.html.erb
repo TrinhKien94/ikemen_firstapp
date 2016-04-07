@@ -3,38 +3,29 @@
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <% (0...@images.count).each do |i|%>
+      <li data-target="#myCarousel" data-slide-to="#{i}"></li>
+      <% end %>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <%= image_tag @image1.file%>
+      <% @images.each do |image|%>
+      <div class="item">
+        <%= image_tag image.file%>
         <div class="carousel-caption">
-          <h3>New York</h3>
+          <h3><% image.title %></h3>
           <p>The atmosphere in New York is lorem ipsum.</p>
         </div>      
       </div>
-
-      <div class="item">
-        <%= image_tag @image2.file%>
-        <div class="carousel-caption">
-          <h3>Chicago</h3>
-          <p>Thank you, Chicago - A night we won't forget.</p>
-        </div>      
-      </div>
-    
-      <div class="item">
-        <%= image_tag @image3.file%>
-        <div class="carousel-caption">
-          <h3>LA</h3>
-          <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
-        </div>      
-      </div>
+      <%end %>
     </div>
-
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".item:first-child").addClass("active");
+    $("li:first-child").addClass("active");
+});
+</script>
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -45,8 +36,5 @@
       <span class="sr-only">Next</span>
     </a>
 </div>
-
-
-
 
 

@@ -5,8 +5,6 @@ class StaticPagesController < ApplicationController
   def help
   end
   def user
-  	@image1=current_user.image.first
-  	@image2=current_user.image.find(2)
-  	@image3=current_user.image.find(3)
+  	@images=current_user.image.limit(2)
   end
 end
