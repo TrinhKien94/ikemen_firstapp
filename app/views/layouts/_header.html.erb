@@ -1,8 +1,8 @@
-﻿<div class="top-wrapper">
+﻿<header class="navbar navbar-fixed-top navbar-inverse">
   <div id="nav-bar">
     <div class = "logo">
-      <a id = "logo" href = "http://localhost:3000/">
-         <img src="/images/logo.png" alt="Smiley face" height="50" width="60"> 
+      <a href = "http://localhost:3000/">
+         <img class="img-circle" src="/images/logo.png" alt="Smiley face" height="50" width="60"> 
       </a>
     </div>
     <div class = "search">
@@ -34,8 +34,8 @@
     </div>
     <div class = "nav-right">
       <% if !user_signed_in? %>
-      <%= link_to " Sign Up", new_user_registration_path, class: "btn btn-danger glyphicon glyphicon-edit  " %> 
-      <%= link_to " Log In", new_user_session_path,class: "btn btn-danger glyphicon glyphicon-log-in"%>
+      <%= link_to " Sign Up", new_user_registration_path, class: "vitri2 btn btn-primary glyphicon glyphicon-edit"%> 
+      <%= link_to " Log In", new_user_session_path,class: "btn btn-primary glyphicon glyphicon-log-in"%>
     <%else%>
       <div class="mylogo dropdown">
         <a href='#'  data-toggle="modal" data-target="#myModal">
@@ -57,4 +57,4 @@
     <%end%>
     </div>
   </div>
-</div>
+</header>

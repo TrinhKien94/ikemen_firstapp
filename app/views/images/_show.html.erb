@@ -1,0 +1,37 @@
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <% (0...@images.count).each do |i|%>
+      <li data-target="#myCarousel" data-slide-to="#{i}"></li>
+      <% end %>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <% @images.each do |image|%>
+      <div class="item">
+        <%= image_tag image.file%>
+        <div class="carousel-caption">
+          <h3><% image.title %></h3>
+          <p>The atmosphere in New York is lorem ipsum.</p>
+        </div>      
+      </div>
+      <%end %>
+    </div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $(".item:first-child").addClass("active");
+    $("li:first-child").addClass("active");
+});
+</script>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+

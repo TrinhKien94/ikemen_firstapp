@@ -53,7 +53,7 @@ p {
 }
 .vitri {
   margin-top:20px;
-  margin-left: 50%;
+  margin-left: 60%;
 }
 .bia {
   background-image: url('default.jpg');
@@ -157,8 +157,9 @@ p {
 
 #nav-bar{
     height: 50px;
-    background-color: #fff;
+    background-color: #222;
     border-bottom: 1px solid #e4e4e4;
+    border-color: #222;
     z-index: 110;
     position: relative;
     margin: 0 auto;
@@ -182,7 +183,9 @@ p {
 .mode-bar{
     clear:both;
 }
-
+.vitri2{
+  margin-right: 10px;
+}
 .btn span{
     font-weight:bold;
     color: #fff;
@@ -201,11 +204,10 @@ p {
   text-decoration: none;
 }
 .mylogo{
-  margin-left: 200px
+  margin-left: 200px;
 }
 .carousel-inner img {
-    -webkit-filter: grayscale(90%);
-    filter: grayscale(90%); /* make all photos black and white */ 
+    height: 700px;
     width: 100%; /* Set width to 100% */
     margin: auto;
 }
@@ -218,4 +220,32 @@ p {
     .carousel-caption {
         display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
+}
+.person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+}
+.person:hover {
+    border-color: #f1f1f1;
+}
+.container {
+    padding: 80px 120px;
+}
+
+
+
+.bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+}
+.bg-1 h3 {color: #fff;}
+.bg-1 p {font-style: italic;}
+.thumbnail{
+  margin-left: 70px;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 70px;
 }
